@@ -7,6 +7,7 @@ services:
       - ./:/home/prerender
     command: bash -c "[ -d 'node_modules' ] || npm i && node server.js"
     environment:
-      DOMAINS: "https://google.com"
+      DOMAINS: '[]'
+      FOLLOW_REDIRECTS: 1
     ports:
-      - '3000:3000'
+      - 3000:3000
